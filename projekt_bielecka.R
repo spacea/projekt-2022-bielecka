@@ -1,2 +1,3 @@
-menu = read.csv("MENU.csv")
+menu = read.csv("MENU.csv", encoding = "UTF-8")
 menu
+
