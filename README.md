@@ -4,15 +4,15 @@
 #### Autorzy: Martyna Bielecka, Dagmara Kramarczyk 
 
 ## Ogólny cel projektu:
-Wykonanie różnorodnych działań i funkcji związanych z danymi pochodzącymi z bistro, zlokalizowanego w Wydziale Nauk Geograficznych i Geologicznych Uniwersytetu Adama Mickiewicza na Morasku, w Poznaniu.
+Wykonanie różnorodnych działań i funkcji związanych z danymi pochodzącymi z bistro, zlokalizowanego na Wydziale Nauk Geograficznych i Geologicznych Uniwersytetu Adama Mickiewicza na Morasku, w Poznaniu.
 
 ### Bazy danych:
-Dane zebrane są w dwóch bazach danych w plikach o formacie .csv, o nazwach: "menu2", oraz "ceny1". 
+Dane zebrane są w dwóch bazach danych w plikach o formacie .csv, o nazwach: "menu", oraz "stare_menu". 
 
-- Baza `menu2.csv` zawiera aktualne informacje (na dzień 26.03.2022r.) takie jak: `NAZWA` (nazwa danego produktu), `CENA` (cena danego produktu), `CZY_VEGE` (jeżeli w komórce znajduje się litera "v" - oznacza to, że dany produkt jest wegetariański), `SKŁADNIKI` (kolumna przeznaczona tylko dla pizz, zawiera informacje o składnikach, jakie znajdują się na danej pizzy), `ID` (ID danego produktu*, czyli kategoria do jakiej należy)
+- Baza `menu.csv` zawiera aktualne informacje (na dzień 26.03.2022r.) takie jak: `NAZWA` (nazwa danego produktu), `CENA` (cena danego produktu), `CZY_VEGE` (jeżeli w komórce znajduje się litera "v" - oznacza to, że dany produkt jest wegetariański), `SKŁADNIKI` (kolumna przeznaczona tylko dla pizz, zawiera informacje o składnikach, jakie znajdują się na danej pizzy), `ID` (ID danego produktu*, czyli kategoria do jakiej należy)
  <br /> *znaczenie ID: "O" - obiad, "P" - pizza, "S" - śniadanie, "K" - kanapka, "PR" - przekąska słona, "DS" - deser, "D" - dodatki, "N" - napój
 
-- Baza `ceny1.csv` zawiera nazwy oraz ceny dań głównych, na podstawie zdjęcia z dnia 13.10.2021r. Służy głównie temu, by móc porównać ceny obecne z cenami sprzed pół roku, oraz za ich pomocą obliczyć prognozę wzrostu cen w najbliższych latach. 
+- Baza `stare_menu.csv` zawiera nazwy oraz ceny dań głównych, na podstawie zdjęcia z dnia 13.10.2021r. Służy głównie temu, by móc porównać ceny obecne z cenami sprzed pół roku, oraz za ich pomocą obliczyć prognozę wzrostu cen w najbliższych latach. 
  
 ### Działania:
 - Prognozy na przyszłość - działanie opiera się na obliczeniu średnich cen dań głównych, na stan obecny oraz stan sześć miesięcy wstecz, a następnie różnicy otrzymanych rezultatów. Z naszych obliczeń wynika, że jest to w przybliżeniu średnio 1,37 zł wzrostu na podstawie dań głównych serwowanych w bistro. <br /> Ma to na celu obliczenie przybliżonej prognozy, z jaką bedą bedą wzrastać ceny na przestrzeni najbliższych lat (2022-2026). Na stan z dnia 13.10.2021r. danie główne kosztowało średnio 10,96 zł, w dniu 13.10.2021r. już 12,33 zł,więc idąc tym tropem, z prognozy wynika, że w 2026 r. może kosztować już średnio 17,81 zł. 
