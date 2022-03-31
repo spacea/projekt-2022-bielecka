@@ -1,0 +1,178 @@
+NAZWA,CENA,CZY_VEGE,SKŁADNIKI,ID
+spagetti bolońskie duże ,9.90,,,O
+spagetti bolońskie małe,7.50,,,O
+spagetti serowo-szpinak duże,9.90,V,,O
+spagetti serowo-szpinak małe,7.50,V,,O
+spagetti pomidorowo-warzywne duże,8.90,V,,O
+spagetti pomidorowo-warzywne małe,6.90,V,,O
+naleśniki z serem ,9.90,V,,O
+naleśniki z dżemem,9.90,V,,O
+naleśniki z musem jabłkowym ,9.90,V,,O
+naleśniki z serem i nutellą ,9.90,V,,O
+placki ziemniaczane z cukrem i śmietaną ,9.90,V,,O
+camembert z żurawiną,10.90,V,,O
+frytki z sosem małe ,6.50,V,,O
+frytki z sosem duże ,7.90,V,,O
+zapiekane ziemniaki z serem i ziołami ,8.50,V,,O
+zapiekanka ,7.50,V,,O
+zapiekanka z warzywami ,9.00,V,,O
+zapiekanka XXL,9.50,V,,O
+zapiekanka XXL z warzywami ,11.50,V,,O
+zapiekanka z szynką mała ,9.00,,,O
+zapiekanka z szynką duża,12.00,,,O
+zapiekanka z salami mała ,9.00,,,O
+zapiekanka z salami duża,12.00,,,O
+zapiekanka z kebabem mała ,10.00,,,O
+zapiekanka z kebabem duża,15.00,,,O
+"kebab, frytki, surówka, sosy ",17.90,,,O
+tortilla z kebabem drobiowym ,13.90,,,O
+tortilla wegetariańska ,11.90,V,,O
+kurczak po chińsku z ryżem ,15.50,,,O
+warzywa po chińsku z ryżem ,13.50,V,,O
+pyzy w sosie bolońskim + surówka ,13.50,,,O
+placki ziemniaczane w sosie bolońskim + surówka ,14.50,,,O
+jajka sadzone z ziemniakami i szpinakiem ,15.50,V,,O
+"camembert, frytki, surówka ",19.50,V,,O
+"filet z kurczaka, frytki, surówka",17.50,,,O
+"de'vollay, frytki, surówka ",18.90,,,O
+"filet w sosie serowo-szpinak, frytki, surówka ",18.90,,,O
+filet w panierce serowej,19.50,,,O
+"filet z susz. pomidorami i mozzarellą, frytki, surówka ",19.90,,,O
+"schabowy, ziemniaki, surówka ",17.90,,,O
+"schab soute, sos boloński, pyzy, surówka ",18.90,,,O
+"filet z grilla, frytki, surówka ",18.90,,,O
+margerita,19.50,V,"sos pomidorowy, ser",P
+fungi,21.00,V,"sos pomidorowy, ser, pieczarki ",P
+vezuvio ,22.00,,"sos pomidorowy, ser, szynka",P
+salami,22.00,,"sos pomidorowy, ser, salami ",P
+capricosa,25.00,,"sos pomidorowy, ser, szynka, pieczarki ",P
+hawajska,26.00,,"sos pomidorowy, ser, szynka, ananas",P
+wegetariańska,26.00,V,"sos pomidorowy, ser, pomidor, cebula, papryka, pieczarki ",P
+salami II,28.00,,"sos pomidorowy, ser, salami, pomidor, cebula, czosnek ",P
+peperoni,28.00,,"sos pomidorowy, ser, salami, papryka, papryczka jalepano, cebula",P
+kebab,33.00,,"sos pomidorowy, ser, mięso kebab, cebula, kapusta pekińska, zielony ogórek, pomidor, sos czosnkowy ",P
+rzeźnicka,33.00,,"sos pomidorowy, ser, szynka, kabanos, boczek wędzony, salami, cebula, czosnek ",P
+la mafia ,32.00,,"sos pomidorowy, podwójny ser, szynka, boczek, cebula, czosnek ",P
+peperoni II,28.00,,"sos pomidorowy, ser, szynka, cebula, papryczki peperoni ",P
+spinaci ,31.00,V,"sos pomidorowy, ser, szpinak, pieczarki, ser pleśniowy ",P
+cztery sery ,33.00,V,"sos pomidorowy, ser mozzarella, ser camembert, ser lazur, ser topiony ",P
+jajecznica na maśle z 2 jaj,6.00,V,,S
+jajecznica na maśle z 4 jaj,8.90,V,,S
+jajecznica na szynce z 2 jaj,6.50,,,S
+jajecznica na szynce z 4 jaj,9.50,,,S
+jajecznica na boczku z 3 jaj,8.00,,,S
+tosty z serem i szynką,6.90,,,S
+tosty z serem i salami ,6.90,,,S
+tosty z kebabem,8.50,,,S
+tosty z kurczakiem grill,8.50,,,S
+tosty z kabanosem i camembertem ,8.90,,,S
+tosty z kurczakiem i camembertem ,8.90,,,S
+tosty z susz. pomidor. i camembertem,8.90,V,,S
+tosty wegetariańskie ,6.90,V,,S
+"zestaw śniadaniowy, parówki, żółty ser, pomidor, ogórek, buła",11.50,,,S
+KANAPKA KFC,6.50,,,K
+kanapka z twarożkiem,5.50,V,,K
+kanapka z grilowanym kurczakiem ,6.50,,,K
+kanapka z salami ,5.50,,,K
+kanapka z serem żółtym ,5.50,V,,K
+kanapka z szynką,5.50,,,K
+kanapka wegetariańska ,5.50,V,,K
+kanapka z camembertem ,5.50,V,,K
+kanapka z jajkiem ,5.50,V,,K
+posypka serowa duża,2.00,V,,D
+posypka serowa mała,1.50,V,,D
+surówka,4.90,V,,D
+zestaw surówek,7.50,V,,D
+cytryna,0.50,V,,D
+bułka ,1.50,V,,D
+chleb,1.50,V,,D
+sos czosnkowy ,3.00,V,,D
+sos pomidorowy ,3.00,V,,D
+góralki ,1.60,V,,DS
+princessa longa ,2.20,V,,DS
+prince polo XXL,2.20,V,,DS
+kitkat ,3.50,V,,DS
+maltanki ,3.50,V,,DS
+twix,3.00,V,,DS
+kinder bueno ,4.00,V,,DS
+knoppers kokosowy ,3.50,V,,DS
+knoppers ,3.50,V,,DS
+grzesiek mleczny ,1.90,V,,DS
+grzesiek klasyczny ,1.90,V,,DS
+grzesiek kakowy ,1.60,V,,DS
+snickers ,4.00,V,,DS
+7days,3.00,V,,DS
+wafle ryżowe z czekoladą mleczną,5.00,V,,DS
+wafelki familijne ,5.00,V,,DS
+ciastka belVita mleczne,3.00,V,,DS
+ciastka belVita z rodzynkami ,3.00,V,,DS
+wafle ryżowe z czekoladą  deserową,5.00,V,,DS
+wafle ryżowe z czekoladą jogurtową ,5.00,V,,DS
+wafelki ROSHEN czekoladowe ,3.00,V,,DS
+wafelki ROSHEN mleczne ,3.00,V,,DS
+wafaleki SONKO w czekoladzie ,3.90,V,,DS
+duplo ,2.50,V,,DS
+grzesiek mega kakowy ,1.90,V,,DS
+drożdżówka,3.00,V,,DS
+pączek,3.00,V,,DS
+ptasie mleczko klasyczne ,14.90,V,,DS
+ptasie mleczko truskawkowe ,14.90,V,,DS
+bombonierka brandy,18.50,V,,DS
+banan,2.50,V,,DS
+jabłko ,1.50,V,,DS
+ciastka hit mango ,5.90,V,,DS
+ciastka hit wanilia ,5.90,V,,DS
+toffifee,9.90,V,,DS
+rafaello ,14.90,V,,DS
+praliny czekoladowe,18.50,V,,DS
+baryłki czekoladowe ,18.50,V,,DS
+czekoladki karmelowe ,18.50,V,,DS
+herbatniki z mleczną czekoladą ,4.50,V,,DS
+pieguski ,4.50,V,,DS
+delicje pomarańczowe ,4.50,V,,DS
+delicje wiśniowe ,4.50,V,,DS
+ciastka maślane ,4.50,V,,DS
+herbatniki z musem cytrynowym ,5.90,V,,DS
+oreo ,5.90,V,,DS
+czekolada gorzka ,5.00,V,,DS
+czekolada z nadzieniem wiśniowym ,5.00,V,,DS
+czekolada truskawkowa ,5.00,V,,DS
+czekolada biała ,5.00,V,,DS
+czekolada mleczna,5.00,V,,DS
+czekolada z karmelem ,5.00,V,,DS
+czekolada z orzechami ,5.00,V,,DS
+ciastka zbożowe ,5.00,V,,DS
+wafle ryżowe naturalne ,4.50,V,,PR
+wafle ryżowe solone ,4.50,V,,PR
+wafle ryżowe z solą morską ,4.50,V,,PR
+bake rolls pizza ,4.50,V,,PR
+bake rolls garlic ,4.50,V,,PR
+chipseletten fromage ,4.50,V,,PR
+chipseletten papryka ,4.50,V,,PR
+coca cola w puszce,4.00,,,N
+coca cola zero w puszce,4.00,,,N
+fanta w puszce,4.00,,,N
+sprite w puszce,4.00,,,N
+coca cola w butelce,5.60,,,N
+coca cola zero w butelce,5.60,,,N
+sprite w butelce,5.60,,,N
+fanta w butelce,5.60,,,N
+fuze tea,5.50,,,N
+lipton,5.50,,,N
+sok,3.70,,,N
+tiger,4.50,,,N
+black,4.50,,,N
+frugo,4.50,,,N
+woda,3.00,,,N
+oshee woda,4.50,,,N
+oshee izotonik,5.50,,,N
+tymbark mały,2.50,,,N
+tymbark duży,4.50,,,N
+herbaty teekanne ,3.50,,,N
+herbaty ziołowe,3.50,,,N
+kawa nescafe,4.50,,,N
+kawa parzona,4.50,,,N
+kawa z ekspresu,7.00,,,N
+latte macchiato z ekspresu,9.00,,,N
+cappuccino smakowe,4.50,,,N
+kompot,3.00,,,N
