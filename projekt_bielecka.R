@@ -142,7 +142,7 @@ zestaw = function(A,B,D){
   A == menu$ID
   B == menu$ID
   D == menu$ID
-  sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1)))
+  cat(sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1))), sep = ", ")
   }
 zestaw("O","N","DS")
 
