@@ -146,6 +146,18 @@ zestaw = function(A,B,D){
   }
 zestaw("O","N","DS")
 
+#zestaw_wege
+
+#funckja pozwalająca wylosować użytkownikowi zestaw wegetariański na podstawie wybranych przez niego kategorii 
+
+zestaw_wege = function(A,B,D){
+  A == menu$ID
+  B == menu$ID
+  D == menu$ID
+  cat(sample(c(sample(menu$NAZWA[menu$ID == "O" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "N" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "DS" & menu$CZY_VEGE == "V"],1))), sep= ", ")
+  
+  }
+zestaw_wege("O","N","DS") 
 
 
 
