@@ -1,24 +1,40 @@
-library(shiny)
+menu = read.csv("menu.csv", encoding = "UTF-8")
 
+library(shiny)
+library(shinyWidgets)
 
 ui <- fluidPage(
-  titlePanel("Zestaw"),
-  sidebarLayout(
-    sidebarPanel(checkboxGroupInput("kategoria", label = h3("Wybierz kategorie do zestawu"),
-                                    choices = list("obiad" = menu$ID == "O", "pizza" = menu$ID == "P", "śniadanie" = menu$ID == "S", "kanapka" = menu$ID == "K", "przekąska słona" = menu$ID == "PR", "deser" = menu$ID == "DS", "dodatki" = menu$ID == "D", "napój" = menu$ID == "N"))),
-    
-    mainPanel(textOutput("zestaw"))
-  )
+  
+  titlePanel(span("Wylosuj swój zestaw", style = "color:magenta")),
+  
+  sidebarPanel( 
+    materialSwitch(inputId = "wege",label = "Czy jesteś wegeterianinem? ", value = FALSE),
+    actionButton("button", "kliknij tutaj"),
+    ),
+  
+  
+  mainPanel(
+    textOutput("tekst"),
+    verbatimTextOutput("value")
+            )
 )
 
-server <- function(input, output)
-{
+server = function(input, output, session) {
   
-  output$zestaw = renderPrint({
-    return(paste0("Twój wylosowany zestaw to:"))
+  observeEvent(input$button, {
     
+   output$tekst = renderText({ paste("Twój wylosowany zestaw to: ")})
+    
+   output$value =  renderPrint({ 
+     if(input$wege == TRUE){
+       zestaw_wege("O", "DS", "N")
+       }
+     else{
+       zestaw("O", "DS", "N")
+     }
   })
-}  
+    
+  }
+)}
 
-
-shinyApp(ui = ui, server = server) 
+shinyApp(ui, server)
