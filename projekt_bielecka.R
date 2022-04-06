@@ -134,6 +134,7 @@ na_co_wystarczy("D", 2)
 
 
 #ZESTAW 
+#ZESTAW 
 
 #funckja pozwalająca wylosować użytkownikowi zestaw na podstawie wybranych przez niego kategorii 
 
@@ -141,8 +142,8 @@ zestaw = function(A,B,D){
   A == menu$ID
   B == menu$ID
   D == menu$ID
-  cat(sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1))), sep= ", ")
-}
+  cat(sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1))), sep = ", ")
+  }
 zestaw("O","N","DS")
 
 #zestaw_wege
@@ -153,15 +154,13 @@ zestaw_wege = function(A,B,D){
   A == menu$ID
   B == menu$ID
   D == menu$ID
-  cat(sample(c(sample(menu$NAZWA[menu$ID == "O" & menu$WEGE == "W"],1),sample(menu$NAZWA[menu$ID == "N" & menu$WEGE == "W"],1),sample(menu$NAZWA[menu$ID == "DS" & menu$WEGE == "W"],1))), sep= ", ")
+  cat(sample(c(sample(menu$NAZWA[menu$ID == "O" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "N" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "DS" & menu$CZY_VEGE == "V"],1))), sep= ", ")
   
-}
+  }
 zestaw_wege("O","N","DS") 
 
 
-
-
-
+#funkcja losująca zestawy w cenie wybranej przez użytkownika 
 
 zestaw = function(kwota){
   X = sample(menu$NAZWA[menu$ID == "O"],1)
