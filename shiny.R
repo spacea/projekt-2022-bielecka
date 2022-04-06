@@ -44,7 +44,7 @@ server = function(input, output, session) {
     if(input$radio == "TAK"){ 
     output$plot = renderPlot({
       ggplot(wzrost_cen, aes(x=procent,
-                             y=rok)) + stat_smooth()  + geom_point() +ggtitle("Procentowy wzrost średniej ceny, na podstawie dania głownego")+theme(plot.title=element_text(hjust=0.5))
+                             y=rok)) + stat_smooth()  + geom_point() +ggtitle("Procentowy wzrost średniej ceny, na podstawie dania głownego")+theme(plot.title=element_text(hjust=0.5))+xlab("wzrost procentowy")
                  }, res = 96)}
    
     
