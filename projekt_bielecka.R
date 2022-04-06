@@ -136,7 +136,7 @@ na_co_wystarczy("D", 2)
 #ZESTAW 
 #ZESTAW 
 
-#funckja pozwalająca wylosować użytkownikowi zestaw na podstawie wybranych przez niego kategorii 
+#funckja pozwalająca wylosować użytkownikowi zestaw na podstawie wybranej przez niego kwoty.
 
 zestaw = function(kwota){
   for (i in menu) {
@@ -156,7 +156,7 @@ zestaw(20)
 
 #zestaw_wege
 
-#funckja pozwalająca wylosować użytkownikowi zestaw wegetariański na podstawie wybranych przez niego kategorii 
+#funckja pozwalająca wylosować użytkownikowi zestaw wegetariański na podstawie wybranej przez niego kwoty.
 
 zestaw_wege = function(kwota){
   for (i in menu) {
