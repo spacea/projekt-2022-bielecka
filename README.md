@@ -9,7 +9,7 @@ Wykonanie różnorodnych działań i funkcji związanych z danymi pochodzącymi 
 ### Bazy danych:
 Dane zebrane są w dwóch bazach danych w plikach o formacie .csv, o nazwach: "menu", oraz "stare_menu". 
 
-- Baza `menu.csv` zawiera aktualne informacje (na dzień 26.03.2022r.) takie jak: `NAZWA` (nazwa danego produktu), `CENA` (cena danego produktu), `CZY_VEGE` (jeżeli w komórce znajduje się litera "v" - oznacza to, że dany produkt jest wegetariański), `SKŁADNIKI` (kolumna przeznaczona tylko dla pizz, zawiera informacje o składnikach, jakie znajdują się na danej pizzy), `ID` (ID danego produktu*, czyli kategoria do jakiej należy)
+- Baza `menu.csv` zawiera aktualne informacje (na dzień 26.03.2022r.) takie jak: `NAZWA` (nazwa danego produktu), `CENA` (cena danego produktu), `WEGE` (jeżeli w komórce znajduje się litera "W" - oznacza to, że dany produkt jest wegetariański), `SKŁADNIKI` (kolumna przeznaczona tylko dla pizz, zawiera informacje o składnikach, jakie znajdują się na danej pizzy), `ID` (ID danego produktu*, czyli kategoria do jakiej należy)
  <br /> *znaczenie ID: "O" - obiad, "P" - pizza, "S" - śniadanie, "K" - kanapka, "PR" - przekąska słona, "DS" - deser, "D" - dodatki, "N" - napój
 
 - Baza `stare_menu.csv` zawiera nazwy oraz ceny dań głównych, na podstawie zdjęcia z dnia 13.10.2021r. Służy głównie temu, by móc porównać ceny obecne z cenami sprzed pół roku, oraz za ich pomocą obliczyć prognozę wzrostu cen w najbliższych latach. 
@@ -24,7 +24,7 @@ Następnie załączony jest wykres, który prezentuje otrzymane wyniki, wraz z o
 
 - ```najtańsze(kategoria)``` - funkcja ma na celu wyznaczenie najtańszego produktu w zależności od kategorii produktów. <br/> Odbywa się to za pomocą przelitrowania bazy danych, oraz wyznaczenia wartości minimalnej w kolumnie cena, dla wybranego ID. Oraz wyświetlenia nazwy uzyskanego wyniku. <br /> Dla przykładu: w kategorii napój najtańszym produktem jest tymbark mały w cenie 2,50 zł.
 
-- ```Vege(kategoria)``` - funkcja ma na celu pokazanie listy produktów, które są wegetariańskie w zależności od kategorii. <br /> Odbywa się to za pomocą przefiltrowania bazy danych w określonej w funkcji kategorii i wyświetleniu nazw produktów, które w kolumnie `CZY_VEGE` mają literkę "v". <br /> Dla przykładu: wegetariańskie śniadania to: <br /> 
+- ```Vege(kategoria)``` - funkcja ma na celu pokazanie listy produktów, które są wegetariańskie w zależności od kategorii. <br /> Odbywa się to za pomocą przefiltrowania bazy danych w określonej w funkcji kategorii i wyświetleniu nazw produktów, które w kolumnie `WEGE` mają literkę "W". <br /> Dla przykładu: wegetariańskie śniadania to: <br /> 
  `1.` jajecznica na maśle z 2 jaj
  `2.` jajecznica na maśle z 4 jaj
  `3.` tosty z susz. pomidorami i camembertem
