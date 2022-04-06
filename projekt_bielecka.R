@@ -138,61 +138,46 @@ na_co_wystarczy("D", 2)
 
 #funckja pozwalająca wylosować użytkownikowi zestaw na podstawie wybranych przez niego kategorii 
 
-zestaw = function(A,B,D){
-  A == menu$ID
-  B == menu$ID
-  D == menu$ID
-  cat(sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1))), sep = ", ")
-  }
-zestaw("O","N","DS")
+zestaw = function(kwota){
+  for (i in menu) {
+    
+    X = sample(menu$NAZWA[menu$ID == "O"],1)
+    Y = sample(menu$NAZWA[menu$ID == "DS"],1)
+    Z = sample(menu$NAZWA[menu$ID == "N"],1)
+    losowanie = sum(menu$CENA[menu$NAZWA == X],menu$CENA[menu$NAZWA == Y],menu$CENA[menu$NAZWA == Z])
+    if(losowanie <= kwota){
+      cat(c(X,Y,Z), sep= ", ") 
+      break
+    }
+  }}
+
+zestaw(20)
+
 
 #zestaw_wege
 
 #funckja pozwalająca wylosować użytkownikowi zestaw wegetariański na podstawie wybranych przez niego kategorii 
 
-zestaw_wege = function(A,B,D){
-  A == menu$ID
-  B == menu$ID
-  D == menu$ID
-  cat(sample(c(sample(menu$NAZWA[menu$ID == "O" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "N" & menu$CZY_VEGE == "V"],1),sample(menu$NAZWA[menu$ID == "DS" & menu$CZY_VEGE == "V"],1))), sep= ", ")
-  
-  }
-zestaw_wege("O","N","DS") 
+zestaw_wege = function(kwota){
+  for (i in menu) {
+    
+    X = sample(menu$NAZWA[menu$ID == "O" & menu$WEGE == "W"],1)
+    Y = sample(menu$NAZWA[menu$ID == "DS" & menu$WEGE == "W"],1)
+    Z = sample(menu$NAZWA[menu$ID == "N" & menu$WEGE == "W"],1)
+    losowanie = sum(menu$CENA[menu$NAZWA == X],menu$CENA[menu$NAZWA == Y],menu$CENA[menu$NAZWA == Z])
+    if(losowanie <= kwota){
+      cat(c(X,Y,Z), sep= ", ") 
+      break
+    }   
+  }}
 
-
-#funkcja losująca zestawy w cenie wybranej przez użytkownika 
-
-zestaw = function(kwota){
-  X = sample(menu$NAZWA[menu$ID == "O"],1)
-  Y = sample(menu$NAZWA[menu$ID == "DS"],1)
-  Z = sample(menu$NAZWA[menu$ID == "N"],1)
-  if (sum(menu$CENA[menu$NAZWA == X],menu$CENA[menu$NAZWA == Y],menu$CENA[menu$NAZWA == Z]) <= kwota ){
-    print(c(X,Y,Z))
-  } else if (sum(menu$CENA[menu$NAZWA == X],menu$CENA[menu$NAZWA == Y],menu$CENA[menu$NAZWA == Z]) > kwota){
-    "nie ma takiego zestawu"
-    }}
-
-zestaw(10)
+zestaw_wege(20)
 
 
 
 
 
 
-
-#jaka_pizza
-##funkcja służąca do wyszukiwania możliwej do zakupu pizzy na podstawie podanego składnika 
-##to nie działa 
-
-grep("ananas", menu$SKŁADNIKI , value = TRUE)
-
-jaka_pizza = function(skladnik){
-  grep("skladnik", menu$SKŁADNIKI , value = TRUE)
-  menu$NAZWA[menu$ID == "P"]
-}
-
-jaka_pizza(ananas)
-stop(zestaw)   
 
 
 
