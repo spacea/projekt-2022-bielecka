@@ -4,7 +4,7 @@ library(tidyverse)
 library(shiny)
 library(shinyWidgets)
 
-ui <- fluidPage(
+ui = fluidPage(
   
   titlePanel(span("Wylosuj swój zestaw", style = "color:magenta")),
   
@@ -21,11 +21,11 @@ ui <- fluidPage(
       choices = c("TAK", "NIE"),
       animation = "tada",
       status = "default"
-    ),
+                      ),
     
     actionButton("button", "kliknij tutaj, by wylosować"),
     
-    ),
+             ),
   
   
   mainPanel(
@@ -35,7 +35,7 @@ ui <- fluidPage(
     
     plotOutput("plot", click = "plot_click"),
            )
-)
+            )
 
 server = function(input, output, session) {
   
@@ -45,7 +45,7 @@ server = function(input, output, session) {
     output$plot = renderPlot({
       ggplot(wzrost_cen, aes(x=procent,
                              y=rok)) + stat_smooth()  + geom_point() +ggtitle("Procentowy wzrost średniej ceny, na podstawie dania głownego")+theme(plot.title=element_text(hjust=0.5))
-    }, res = 96)}
+                 }, res = 96)}
    
     
    output$tekst = renderText({ paste("Twój wylosowany zestaw to: ")})
@@ -57,10 +57,7 @@ server = function(input, output, session) {
      else{
        zestaw(input$kwota)
      }
-  })
-   
-  
-    
+  })   
   }
 )}
 
