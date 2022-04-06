@@ -132,6 +132,7 @@ na_co_wystarczy = function(kategoria, kwota){
 na_co_wystarczy("D", 2)
 
 
+
 #ZESTAW 
 
 #funckja pozwalająca wylosować użytkownikowi zestaw na podstawie wybranych przez niego kategorii 
@@ -140,11 +141,22 @@ zestaw = function(A,B,D){
   A == menu$ID
   B == menu$ID
   D == menu$ID
-  sample(c(sample(menu$NAZWA[menu$ID == A],1),
-           sample(menu$NAZWA[menu$ID == B],1),
-           sample(menu$NAZWA[menu$ID == D],1)))
-  }
+  cat(sample(c(sample(menu$NAZWA[menu$ID == A],1), sample(menu$NAZWA[menu$ID == B],1), sample(menu$NAZWA[menu$ID == D],1))), sep= ", ")
+}
 zestaw("O","N","DS")
+
+#zestaw_wege
+
+#funckja pozwalająca wylosować użytkownikowi zestaw wegetariański na podstawie wybranych przez niego kategorii 
+
+zestaw_wege = function(A,B,D){
+  A == menu$ID
+  B == menu$ID
+  D == menu$ID
+  cat(sample(c(sample(menu$NAZWA[menu$ID == "O" & menu$WEGE == "W"],1),sample(menu$NAZWA[menu$ID == "N" & menu$WEGE == "W"],1),sample(menu$NAZWA[menu$ID == "DS" & menu$WEGE == "W"],1))), sep= ", ")
+  
+}
+zestaw_wege("O","N","DS") 
 
 
 
