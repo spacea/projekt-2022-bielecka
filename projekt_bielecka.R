@@ -13,7 +13,7 @@ menu_stare = read.csv("stare_menu.csv", encoding = "UTF-8")
 menu_stare
 
 
-#Prognoza wzrostu cen w przeciągu najbliższych lat (na podstawie zmiany średniej cen dań głównych na przestrzeni 6 miesięcy) 
+#Prognoza wzrostu cen w przeciągu najbliższych lat (na podstawie zmiany średniej cen dań głównych na przestrzeni ostatniego roku) 
 
 nowe_ceny = mean(menu$CENA[1:41])
 nowe_ceny
