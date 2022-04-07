@@ -9,23 +9,23 @@ ui = fluidPage(
   titlePanel(span("Wylosuj swój zestaw", style = "color:magenta")),
   
   sidebarPanel( 
-  
+    
     numericInput("kwota", "Zaznacz kwotę, w której ma się mieścić zestaw:", 20, min = 20, max = 50),
     
     materialSwitch(inputId = "wege",label = "Zaznacz jeśli jesteś wegeterianinem. ", value = FALSE),
     
     prettyRadioButtons(
       inputId = "radio",
-      label = "Czy chcesz wyświetlić wykres, pokazujący procentowy wzrost średniej ceny dania głównego? ( !UWAGA! Jeśli zaznaczysz 'TAK', nie będziesz już mógł cofnąć tej decyzji.)",
+      label = "Jaki wykres chcesz wyświetlić?",
       icon = icon("check"),
-      choices = c("TAK", "NIE"),
+      choices = c("Procentowy wzrost średniej ceny, na podstawie dania głownego.", "Maksymalne ceny produktów w danych kategoriach.", "Minimalne ceny produktów w danych kategoriach." ),
       animation = "tada",
       status = "default"
-                      ),
+    ),
     
     actionButton("button", "kliknij tutaj, by wylosować"),
     
-             ),
+  ),
   
   
   mainPanel(
@@ -33,33 +33,39 @@ ui = fluidPage(
     
     verbatimTextOutput("value"),
     
+    textOutput("alternatywa"),
+    
     plotOutput("plot", click = "plot_click"),
-           )
-            )
+  )
+)
 
 server = function(input, output, session) {
   
   observeEvent(input$button, {
     
-    if(input$radio == "TAK"){ 
-    output$plot = renderPlot({
-      ggplot(wzrost_cen, aes(x=procent,
-                             y=rok)) + stat_smooth(method = "auto" , color="magenta")  + geom_point() +ggtitle("Procentowy wzrost średniej ceny, na podstawie dania głownego")+theme(plot.title=element_text(hjust=0.5))+xlab("wzrost procentowy")
-                 }, res = 96)}
-   
+    if(input$radio == "Procentowy wzrost średniej ceny, na podstawie dania głownego."){ 
+      output$plot = renderPlot({
+        ggplot(wzrost_cen, aes(x=procent,
+                               y=rok)) + stat_smooth(method = "auto" , color="magenta")  + geom_point() +ggtitle("Procentowy wzrost średniej ceny, na podstawie dania głownego")+theme(plot.title=element_text(hjust=0.5))+xlab("wzrost procentowy")
+      }, res = 96)}
+    else if (input$radio == "Maksymalne ceny produktów w danych kategoriach."){output$plot = renderPlot(ggplot(dane, aes(nazwa,ceny_maksymalne)) + geom_bar(stat = "identity", color = "magenta") + theme_light() +
+                                                              ggtitle("Maksymalne ceny produktów z każdej kategorii")+theme(plot.title=element_text(hjust=0.5))+xlab("nazwa produktu") + ylab("cena najdroższego produktu"))}
     
-   output$tekst = renderText({ paste("Twój wylosowany zestaw to: ")})
+    else if (input$radio == "Minimalne ceny produktów w danych kategoriach."){output$plot = renderPlot(ggplot(dane,aes(nazwa,ceny_minimalne)) + geom_bar(stat = "identity", color ="magenta") + theme_light() +
+                                                                                                          ggtitle("Minimalne ceny produktów z każdej kategorii")+theme(plot.title=element_text(hjust=0.5))+xlab("nazwa produktu") + ylab("cena najtańszego produktu"))}
     
-   output$value =  renderPrint({ 
-     if(input$wege == TRUE){
-       zestaw_wege(input$kwota)
-       }
-     else{
-       zestaw(input$kwota)
-     }
-  })   
+    output$tekst = renderText({ paste("Twój wylosowany zestaw to: ")})
+    
+    output$value =  renderPrint({ 
+      if(input$wege == TRUE){
+        zestaw_wege(input$kwota)
+      }
+      else{
+        zestaw(input$kwota)
+      }
+    })   
   }
-)}
+  )}
 
 shinyApp(ui, server)
 
